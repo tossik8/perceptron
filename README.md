@@ -21,9 +21,15 @@ The perceptron algorithm is a supervised learning technique used for binary clas
 
 ### Dataset
 - Used the Iris dataset for demonstration purposes.
-- Features included sepal and petal dimensions.
+
+| Id | SepalLengthCm | SepalWidthCm | PetalLengthCm | PetalWidthCm | Species |
+| :--| :------------ | :----------- | :------------ | :----------- | :------ |
+| 1  | 5.1 | 3.5 | 1.4 | 0.2 | Iris-setosa |
+| 51 | 7.0 | 3.2 | 4.7 | 1.4 | Iris-versicolor |
+| 101 | 6.3 | 3.3 | 6.0 | 2.5 | Iris-virginica |
+
 - Two target classes: Setosa (1) and rest (0).
-- The perceptron was trained on 2 features: sepal width and length. The data distribution looks as follows:
+- The perceptron was trained on 2 features: sepal length and width. The data distribution looks as follows:
 ![Scatter plot of Iris flowers](Iris.png)
 
 ## Results
