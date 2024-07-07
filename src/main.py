@@ -17,15 +17,15 @@ plt.ylabel(y_label)
 plt.title('Iris')
 plt.show()
 
-X = df.drop(columns=['Species'])
+X = df.drop(columns=['Id', 'Species'])
 df.loc[df['Species'] != 'Iris-setosa', 'Species'] = 0
 df.loc[df['Species'] == 'Iris-setosa', 'Species'] = 1
 y = df['Species'].values.reshape(150, 1).astype(float)
 
 perceptron = Perceptron(epochs=25)
-perceptron.fit(X.values[:, 1:3], y)
+perceptron.fit(X.values[:, 0:2], y)
 
-predictions = perceptron.predict(X.values[:, 1:3])
+predictions = perceptron.predict(X.values[:, 0:2])
 print(f'Accuracy: {accuracy_score(y, predictions)}')
 
 x2 = -(perceptron.weights[0] / perceptron.weights[1]) * df[x_label] - (perceptron.bias / perceptron.weights[1])
