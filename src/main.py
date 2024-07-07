@@ -1,9 +1,10 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 from perceptron import Perceptron
 
-df = pd.read_csv('../Iris.csv')
+df = pd.read_csv(os.path.join(os.path.dirname(__file__), '..', 'Iris.csv'))
 print(df.describe())
 
 colours = df['Species'].map({'Iris-setosa': 'r',
